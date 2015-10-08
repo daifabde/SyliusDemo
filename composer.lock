@@ -6340,12 +6340,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sylius/Sylius.git",
-                "reference": "54ff288acf36f40979a6be13675bf0037c3bb3ec"
+                "reference": "fa158b36d7a95f55e03ba6f77900ecc35b1baac6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Sylius/Sylius/zipball/54ff288acf36f40979a6be13675bf0037c3bb3ec",
-                "reference": "54ff288acf36f40979a6be13675bf0037c3bb3ec",
+                "url": "https://api.github.com/repos/Sylius/Sylius/zipball/fa158b36d7a95f55e03ba6f77900ecc35b1baac6",
+                "reference": "fa158b36d7a95f55e03ba6f77900ecc35b1baac6",
                 "shasum": ""
             },
             "require": {
@@ -6470,6 +6470,7 @@
                 "sylius/web-bundle": "self.version"
             },
             "require-dev": {
+                "akeneo/phpspec-skip-example-extension": "~1.2",
                 "behat/behat": "~3.0",
                 "behat/mink": "~1.6",
                 "behat/mink-browserkit-driver": "~1.2",
@@ -6477,6 +6478,7 @@
                 "behat/mink-selenium2-driver": "~1.2",
                 "behat/symfony2-extension": "~2.0",
                 "coduo/php-matcher": "~1.0",
+                "lakion/mink-debug-extension": "^1.0.1",
                 "phpspec/phpspec": "~2.1",
                 "phpunit/phpunit": "~4.1"
             },
@@ -6516,7 +6518,7 @@
             ],
             "description": "E-Commerce platform for PHP, based on Symfony framework.",
             "homepage": "http://sylius.org",
-            "time": "2015-09-15 08:53:15"
+            "time": "2015-10-08 10:25:22"
         },
         {
             "name": "symfony-cmf/block-bundle",
@@ -7018,12 +7020,12 @@
             "version": "v2.7.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/AsseticBundle.git",
+                "url": "https://github.com/symfony/assetic-bundle.git",
                 "reference": "3ae5c8ca3079b6e0033cc9fbfb6500e2bc964da5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/AsseticBundle/zipball/3ae5c8ca3079b6e0033cc9fbfb6500e2bc964da5",
+                "url": "https://api.github.com/repos/symfony/assetic-bundle/zipball/3ae5c8ca3079b6e0033cc9fbfb6500e2bc964da5",
                 "reference": "3ae5c8ca3079b6e0033cc9fbfb6500e2bc964da5",
                 "shasum": ""
             },
@@ -7088,12 +7090,12 @@
             "version": "v2.7.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/MonologBundle.git",
+                "url": "https://github.com/symfony/monolog-bundle.git",
                 "reference": "9320b6863404c70ebe111e9040dab96f251de7ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/MonologBundle/zipball/9320b6863404c70ebe111e9040dab96f251de7ac",
+                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/9320b6863404c70ebe111e9040dab96f251de7ac",
                 "reference": "9320b6863404c70ebe111e9040dab96f251de7ac",
                 "shasum": ""
             },
@@ -7147,12 +7149,12 @@
             "version": "v2.3.8",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/SwiftmailerBundle.git",
+                "url": "https://github.com/symfony/swiftmailer-bundle.git",
                 "reference": "970b13d01871207e81d17b17ddda025e7e21e797"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/SwiftmailerBundle/zipball/970b13d01871207e81d17b17ddda025e7e21e797",
+                "url": "https://api.github.com/repos/symfony/swiftmailer-bundle/zipball/970b13d01871207e81d17b17ddda025e7e21e797",
                 "reference": "970b13d01871207e81d17b17ddda025e7e21e797",
                 "shasum": ""
             },
