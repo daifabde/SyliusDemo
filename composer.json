@@ -1,10 +1,6 @@
 {
-    "name":        "sylius/sylius-standard",
-    "description": "Sylius Standard Edition, base application for Sylius powered E-Commerce projects.",
-    "keywords":    ["symfony", "symfony2", "sylius", "distribution", "ecommerce", "cart", "shopping"],
-    "type":        "project",
     "license":     "MIT",
-    "homepage":    "http://sylius.org",
+    "homepage":    "http://demo.sylius.org",
     "authors": [
         {
             "name":     "Paweł Jędrzejewski",
@@ -38,17 +34,13 @@
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Symfony\\Cmf\\Bundle\\CreateBundle\\Composer\\ScriptHandler::downloadCreateAndCkeditor",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
         "post-update-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Symfony\\Cmf\\Bundle\\CreateBundle\\Composer\\ScriptHandler::downloadCreateAndCkeditor",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ]
     },
@@ -62,9 +54,6 @@
         "bin-dir": "bin"
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "0.15-dev"
-        },
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
         "incenteev-parameters": {

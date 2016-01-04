@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "89d6f2b6ee9545cc4e25a99db122f004",
-    "content-hash": "4262785c668b4fb19988ab6190458b17",
+    "hash": "5a331f17c19150d3b1840f26f930e334",
+    "content-hash": "adc8dc4110eb574e801c73f6b6d756aa",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -6507,12 +6507,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sylius/Sylius.git",
-                "reference": "52600b3d19a4edbd0f6f1c9f1d02a9dbf402031c"
+                "reference": "fbf524517d5e634239daadcbf2b60f98daab1c87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Sylius/Sylius/zipball/52600b3d19a4edbd0f6f1c9f1d02a9dbf402031c",
-                "reference": "52600b3d19a4edbd0f6f1c9f1d02a9dbf402031c",
+                "url": "https://api.github.com/repos/Sylius/Sylius/zipball/fbf524517d5e634239daadcbf2b60f98daab1c87",
+                "reference": "fbf524517d5e634239daadcbf2b60f98daab1c87",
                 "shasum": ""
             },
             "require": {
@@ -6698,7 +6698,7 @@
             ],
             "description": "E-Commerce platform for PHP, based on Symfony framework.",
             "homepage": "http://sylius.org",
-            "time": "2016-01-04 15:27:21"
+            "time": "2016-01-04 22:19:30"
         },
         {
             "name": "symfony-cmf/block-bundle",
