@@ -20,5 +20,5 @@ mounts:
 hooks:
     build: |
       rm web/app_dev.php
-    deploy: |
-      app/console --env=prod cache:clear --no-debug
+      rm web/app_test.php
+      app/console --env=prod --no-debug cache:warmup
