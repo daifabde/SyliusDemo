@@ -81,3 +81,4 @@ hooks:
         rm -rf app/cache/*
         php app/console --env=prod --no-debug cache:warmup --no-optional-warmers
         php app/console --env=prod --no-debug doctrine:migrations:migrate --no-interaction
+        php app/console --env=prod --no-debug doctrine:fixtures:load --no-interaction
