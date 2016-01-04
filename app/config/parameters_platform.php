@@ -13,13 +13,13 @@ foreach ($relationships['database'] as $endpoint) {
       continue;
     }
 
-    $container->setParameter('database_driver', 'pdo_' . $endpoint['scheme']);
-    $container->setParameter('database_host', $endpoint['host']);
-    $container->setParameter('database_port', $endpoint['port']);
-    $container->setParameter('database_name', $endpoint['path']);
-    $container->setParameter('database_user', $endpoint['username']);
-    $container->setParameter('database_password', $endpoint['password']);
-    $container->setParameter('database_path', '');
+    $container->setParameter('sylius.database.driver', 'pdo_' . $endpoint['scheme']);
+    $container->setParameter('sylius.database.host', $endpoint['host']);
+    $container->setParameter('sylius.database.port', $endpoint['port']);
+    $container->setParameter('sylius.database.name', $endpoint['path']);
+    $container->setParameter('sylius.database.user', $endpoint['username']);
+    $container->setParameter('sylius.database.password', $endpoint['password']);
+    $container->setParameter('sylius.database.path', '');
 }
 
 ini_set('session.save_path', '/tmp/sessions');
