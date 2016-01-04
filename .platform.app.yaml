@@ -20,6 +20,5 @@ mounts:
 hooks:
     build: |
       rm web/app_dev.php
-      app/console --env=prod assetic:dump --no-debug
     deploy: |
       app/console --env=prod cache:clear --no-debug
