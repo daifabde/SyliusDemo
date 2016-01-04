@@ -1,24 +1,83 @@
-name: sylius 
+name: sylius
 
-type: php:5.6
+type: "php:5.6"
 build:
-  flavor: symfony
+    flavor: symfony
 
 relationships:
-    database: 'mysql:mysql'
+    database: "mysql:mysql"
 
 web:
-    document_root: '/web'
-    passthru: '/app.php'
+    document_root: "/web"
+    passthru: "/app.php"
 
-disk: 2048
+    whitelist:
+      - \.css$
+      - \.js$
+
+      - \.gif$
+      - \.jpe?g$
+      - \.png$
+      - \.tiff?$
+      - \.wbmp$
+      - \.ico$
+      - \.jng$
+      - \.bmp$
+      - \.svgz?$
+
+      - \.midi?$
+      - \.mpe?ga$
+      - \.mp2$
+      - \.mp3$
+      - \.m4a$
+      - \.ra$
+      - \.weba$
+
+      - \.3gpp?$
+      - \.mp4$
+      - \.mpe?g$
+      - \.mpe$
+      - \.ogv$
+      - \.mov$
+      - \.webm$
+      - \.flv$
+      - \.mng$
+      - \.asx$
+      - \.asf$
+      - \.wmv$
+      - \.avi$
+
+      - \.ogx$
+
+      - \.swf$
+
+      - \.jar$
+
+      - \.ttf$
+      - \.eot$
+      - \.woff$
+      - \.otf$
+
+      - /robots\.txt$
+
+      - \.html$
+      - \.pdf$
+
+disk: 10000
 
 mounts:
-    '/var/cache': 'shared:files/cache'
-    '/var/logs': 'shared:files/logs'
+    "/app/cache": "shared:files/cache"
+    "/app/logs": "shared:files/logs"
+    "/web/uploads": "shared:files/uploads"
+    "/web/media": "shared:files/media"
 
 hooks:
     build: |
-      rm web/app_dev.php
-      rm web/app_test.php
-      app/console --env=prod --no-debug cache:warmup
+        rm -rf /app/app/cache/build
+        php app/console --ansi --env=prod --no-debug cache:warmup --no-optional-warmers
+        php app/console --ansi --env=prod --no-debug assets:install
+        php app/console --ansi --env=prod --no-debug assetic:dump
+    deploy: |
+        rm -rf app/cache/*
+        php app/console --env=prod --no-debug cache:warmup --no-optional-warmers
+        php app/console --env=prod --no-debug doctrine:migrations:migrate --no-interaction
