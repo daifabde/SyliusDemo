@@ -1,0 +1,25 @@
+name: sylius 
+
+type: php:5.6
+build:
+  flavor: symfony
+
+relationships:
+    database: 'mysql:mysql'
+
+web:
+    document_root: '/web'
+    passthru: '/app.php'
+
+disk: 2048
+
+mounts:
+    '/var/cache': 'shared:files/cache'
+    '/var/logs': 'shared:files/logs'
+
+hooks:
+    build: |
+      rm web/app_dev.php
+      bin/console --env=prod assetic:dump --no-debug
+    deploy: |
+      bin/console --env=prod cache:clear --no-debug
