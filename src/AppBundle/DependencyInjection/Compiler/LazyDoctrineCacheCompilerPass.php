@@ -17,7 +17,11 @@ class LazyDoctrineCacheCompilerPass implements CompilerPassInterface
             'doctrine_cache.providers.phpcr_meta',
             'doctrine_cache.providers.phpcr_nodes',
             'doctrine_cache.providers.sylius_rbac',
-            'doctrine_cache.providers.sylius_settings'
+            'doctrine_cache.providers.sylius_settings',
+            'sylius.oauth_server.client_manager',
+            'fos_oauth_server.access_token_manager.default',
+            'fos_oauth_server.refresh_token_manager.default',
+            'fos_oauth_server.auth_code_manager.default'
         );
 
         foreach ($cacheProviderIds as $id) {
