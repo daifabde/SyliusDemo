@@ -7,10 +7,6 @@ build:
 relationships:
     database: "mysql:mysql"
 
-runtime:
-    extensions:
-        - redis
-
 web:
     document_root: "/web"
     passthru: "/app.php"
