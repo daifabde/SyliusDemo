@@ -4,6 +4,10 @@ type: "php:7.0"
 build:
     flavor: symfony
 
+runtime:
+    extensions:
+        - redis
+
 relationships:
     database: "mysql:mysql"
     redis: "redis:redis"
