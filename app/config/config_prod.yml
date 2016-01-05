@@ -12,7 +12,7 @@ doctrine:
                 metadata_cache_driver:
                     type: redis 
                     host: redis.internal 
-                    instance: PhpRedis
+                    instance_class: PhpRedis
 
 monolog:
     handlers:
