@@ -6,6 +6,7 @@ build:
 
 relationships:
     database: "mysql:mysql"
+    redis: "redis:redis"
 
 web:
     document_root: "/web"
