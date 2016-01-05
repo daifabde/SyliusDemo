@@ -1,6 +1,6 @@
 name: sylius
 
-type: "php:7.0"
+type: "php:5.6"
 build:
     flavor: symfony
 
