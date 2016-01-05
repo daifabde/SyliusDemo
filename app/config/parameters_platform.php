@@ -22,6 +22,6 @@ foreach ($relationships['database'] as $endpoint) {
     $container->setParameter('sylius.database.path', '');
 }
 
-$container->setParameter('sylius.cache', array('type' => 'redis', 'redis' => array('host' => 'redis.internal')));
+$container->setParameter('sylius.cache', array('type' => 'redis', 'redis' => array('host' => $relationships['redis'][0]['host'], 'port' => $relationships['redis'][0]['port'])));
 
 ini_set('session.save_path', '/tmp/sessions');
