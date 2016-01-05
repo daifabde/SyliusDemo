@@ -1,12 +1,11 @@
 name: sylius
 
-type: "php:5.6"
+type: "php:7.0"
 build:
     flavor: symfony
 
 relationships:
     database: "mysql:mysql"
-    redis: "redis:redis"
 
 runtime:
     extensions:
