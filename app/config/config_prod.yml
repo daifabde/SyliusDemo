@@ -5,14 +5,14 @@ framework:
     router:
         strict_requirements: null
 
-#doctrine:
-#    orm:
-#        entity_managers:
-#            default:
-#                metadata_cache_driver:
-#                    type: memcached
-#                    host: localhost
-#                    port: 11211
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                metadata_cache_driver:
+                    type: redis 
+                    host: %sylius.redis.host% 
+                    port: %sylius.redis.port% 
 
 monolog:
     handlers:

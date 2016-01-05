@@ -21,5 +21,9 @@ foreach ($relationships['database'] as $endpoint) {
     $container->setParameter('sylius.database.password', $endpoint['password']);
     $container->setParameter('sylius.database.path', '');
 }
+foreach ($relationships['redis'] as $endpoint) {
+    $container->setParameter('sylius.redis.host', $endpoint['host']);
+    $container->setParameter('sylius.redis.port', $endpoint['port']);
+}
 
 ini_set('session.save_path', '/tmp/sessions');
