@@ -13,6 +13,7 @@ doctrine:
                     type: redis 
                     host: %sylius.redis.host% 
                     port: %sylius.redis.port% 
+                    instance: PhpRedis
 
 monolog:
     handlers:
