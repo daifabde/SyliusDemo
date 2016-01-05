@@ -21,12 +21,18 @@ security:
                 use_forward:  false
                 use_referer:  true
             logout:
-                path:   /administration/logout
+                path:   /logout
                 target: /administration/login
             anonymous: true
 
+        api:
+            pattern:    ^/api
+            fos_oauth:  true
+            stateless:  true
+            anonymous:  true
+
         main:
-            switch_user: { role: ROLE_SYLIUS_ADMIN }
+            switch_user: { role: ROLE_ALLOWED_TO_SWITCH }
             context:     user
             pattern:     /.*
             form_login:
@@ -48,12 +54,16 @@ security:
                     amazon:   "/login/check-amazon"
                     facebook: "/login/check-facebook"
                     google:   "/login/check-google"
-                login_path:   /connect
-                failure_path: /connect
+                login_path:   /login
+                failure_path: /login
                 oauth_user_provider:
                     service: sylius.oauth.user_provider
             logout: true
             anonymous: true
+
+        oauth_token:
+            pattern:  ^/oauth/v2/token
+            security: false
 
         dev:
             pattern:  ^/(_(profiler|wdt)|css|images|js)/
@@ -70,5 +80,7 @@ security:
         - { path: "/administration.*", role: ROLE_ADMINISTRATION_ACCESS }
 
         - { path: "/account.*", role: ROLE_USER }
+
+        - { path: ^/api, role: ROLE_API }
 
         - { path: "/_partial.*", ip: 127.0.0.1 }
