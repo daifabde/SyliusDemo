@@ -77,13 +77,9 @@ mounts:
     "/web/media": "shared:files/media"
 
 hooks:
-    build: |
-        rm -rf /app/app/cache/build
-        php app/console --ansi --env=prod --no-debug cache:warmup --no-optional-warmers
-        php app/console --ansi --env=prod --no-debug assets:install
-        php app/console --ansi --env=prod --no-debug assetic:dump
     deploy: |
         rm -rf app/cache/*
+        redis-cli -h redis.internal flushall
         php app/console --env=prod --no-debug cache:warmup --no-optional-warmers
         php app/console --env=prod --no-debug doctrine:migrations:migrate --no-interaction
         php app/console --env=prod --no-debug doctrine:fixtures:load --no-interaction
