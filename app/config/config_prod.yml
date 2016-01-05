@@ -11,8 +11,7 @@ doctrine:
             default:
                 metadata_cache_driver:
                     type: redis 
-                    host: %sylius.redis.host% 
-                    port: %sylius.redis.port% 
+                    host: redis.internal 
                     instance: PhpRedis
 
 monolog:

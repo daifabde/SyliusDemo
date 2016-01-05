@@ -22,7 +22,4 @@ foreach ($relationships['database'] as $endpoint) {
     $container->setParameter('sylius.database.path', '');
 }
 
-$container->setParameter('sylius.redis.host', $relationships['redis'][0]['host']);
-$container->setParameter('sylius.redis.port', $relationships['redis'][0]['port']);
-
 ini_set('session.save_path', '/tmp/sessions');
