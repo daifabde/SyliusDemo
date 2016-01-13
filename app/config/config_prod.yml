@@ -10,9 +10,9 @@ doctrine:
         entity_managers:
             default:
                 metadata_cache_driver:
-                    type: redis 
-                    host: redis.internal 
-                    instance_class: PhpRedis
+                    type: memcached
+                    host: localhost
+                    port: 11211
 
 monolog:
     handlers:
